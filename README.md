@@ -1,4 +1,4 @@
-# Hybrid 3D Representation for 3D Animal Model
+# Hybrid Representation for 3D Animal Model
 
 This repository contains the implementation and experiments a bachelor thesis.
 
