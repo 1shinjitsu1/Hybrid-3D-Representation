@@ -14,8 +14,8 @@ The work builds upon and extends **NeRF-Tex** and related 3D modeling approaches
 ## Overview
 
 This thesis explores a hybrid 3D representation method combining:
-- ->Neural Radiance Fields (NeRF)
-- ->Structured animal body priors (e.g. SMAL model)
+- Neural Radiance Fields (NeRF)
+- Structured animal body priors (e.g. SMAL model)
 
 The goal is to improve realism, controllability and generalization of 3D animal reconstruction.
 
@@ -25,8 +25,8 @@ The goal is to improve realism, controllability and generalization of 3D animal 
 
 This project builds upon:
 
-- ->NeRF-Tex
-- ->The Skinned Multi-Animal Linear Model
+- NeRF-Tex
+- The Skinned Multi-Animal Linear Model
 
 ---
 
@@ -55,8 +55,8 @@ python interactive_renderer.py
 
 ## Notes
 
-- -> Only the essential checkpoints and code are included, repository excludes large datasets.
-Should you have a question regarding any details or want the files, feel free to contact me via [e-mail](lucinkakoprivnanska@gmail.com).
+- -Only the essential checkpoints and code are included, repository excludes large datasets.
+Should you have a question regarding any details or require access to the files, feel free to contact me via [e-mail](lucinkakoprivnanska@gmail.com).
 
 ---
 
