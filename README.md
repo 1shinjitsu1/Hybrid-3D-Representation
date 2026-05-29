@@ -55,7 +55,7 @@ python interactive_renderer.py
 
 ## Notes
 
-- -Only the essential checkpoints and code are included, repository excludes large datasets.
+- Only the essential checkpoints and code are included, repository excludes large datasets.
 Should you have a question regarding any details or require access to the files, feel free to contact me via [e-mail](lucinkakoprivnanska@gmail.com).
 
 ---
@@ -63,8 +63,8 @@ Should you have a question regarding any details or require access to the files,
 ## Acknowledgements
 
 All credit goes to the original authors of the base methods,
-- -> [NeRF-Tex](https://hbaatz.github.io/nerf-tex/)
-- -> [The SMAL Model](https://smal.is.tue.mpg.de/) 
+- [NeRF-Tex](https://hbaatz.github.io/nerf-tex/)
+- [The SMAL Model](https://smal.is.tue.mpg.de/) 
 
 
 
