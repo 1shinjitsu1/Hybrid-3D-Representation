@@ -122,7 +122,8 @@ void C_Instancer::createAABB(RTCDevice& device, RTCScene& scene, std::vector<flo
 
 /* Add AABB instance to the scene collecting all patch instances */
 template <typename Container>
-void C_Instancer::AddInstance(Container& transformation) {
+//void C_Instancer::AddInstance(Container& transformation { //original
+void C_Instancer::AddInstance(Container transformation) { //I added
     /* Add inverse transformation and normalized transpose to buffer */
     Eigen::Matrix<float, 4, 4, Eigen::RowMajor> transform_mat(transformation.data());
     //std::cout << "TRAFO MAT:\n" << transform_mat << std::endl;

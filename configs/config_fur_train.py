@@ -100,8 +100,9 @@ config = {
         'net_chunk': 65536,
     },
 
-    # Logging options
+    #Logging options 
     'logger_config': {
         'module': 'network.logger.Logger'
     }
+    
 }

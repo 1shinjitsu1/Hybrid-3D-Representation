@@ -11,7 +11,8 @@ class C_Instancer {
     public:
         C_Instancer(std::vector<float> b_0, std::vector<float> b_1, bool cast_shadow_rays = false, std::vector<std::string> texture_paths = {}, uint32_t min_shadow_samples = 4, uint32_t n_shadow_samples = 512, uint32_t min_texture_samples = 4, uint32_t n_texture_samples = 512, float jitter_amount = 0, uint8_t instance_sample_method = false, bool use_mean_distance = false, uint32_t seed = 0);
         template <typename Container>
-        void AddInstance(Container& transformation);
+        //void AddInstance(Container& transformation); //original
+	void AddInstance(Container transformation); //I added
         void DistributeInstancesOnMesh(std::string mesh_path, float scale, std::string patch_origins_path = "");
         void AddMesh(std::string mesh_path, std::string texture_path = "");
         void CommitScene();

@@ -15,8 +15,7 @@ config = {
         'module': 'network.dataset.Dataset',
         'data_loader_config': {
             'module': 'network.dataset.TFRecord',
-            #'tfr_path': 'datasets/materials/plush/tfr/train.tfr'
-            'tfr_path': '/media/hendrik/Share/datasets/materials/patch/public/plush/tfr/train.tfr'
+            'tfr_path': 'datasets/materials/plush/tfr/train.tfr'
         },
         'pixel_sampler_config': {
             'module': 'network.pixel_sampler.Proxy',

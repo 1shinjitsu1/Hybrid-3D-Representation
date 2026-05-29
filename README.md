@@ -1,55 +1,70 @@
-# NeRF-Tex
+# Hybrid 3D Representation for 3D Animal Model
 
-This repo contains the implementation of NeRF-Tex: Neural Reflectance Field Textures written in [Tensorflow](https://www.tensorflow.org/). The paper and EGSR presentation can be found on the [project page](https://hbaatz.github.io/nerf-tex/). Should you have a question regarding the implementation feel free to contact [Hendrik Baatz](mailto:baatzh@student.ethz.ch).
+This repository contains the implementation and experiments a bachelor thesis.
 
-# Setting up the code for use
-You'll need to have [Conda](https://docs.conda.io/en/latest/) and [Embree 3](https://github.com/embree/embree) installed on your system. Then just follow the steps below with the working directory being the one where this README file resides.
+The work builds upon and extends **NeRF-Tex** and related 3D modeling approaches, focusing on hybrid representations for detailed 3D animal reconstruction.
 
-1. Create & activate the python environment
+<div style="display:flex; gap:10px;">
+<img src="gifs/curls_lion.gif" width="48%">
+<img src="gifs/fur_deer.gif" width="48%">
+</div>
 
-    ```
-    conda env create
-    conda activate nerf-tex
-    ```
+---
 
-2. Get the dependencies in case you did not already clone this repo with the --recursive flag
+## Overview
 
-    ```
-    git submodule update --init
-    ```
+This thesis explores a hybrid 3D representation method combining:
+- ->Neural Radiance Fields (NeRF)
+- ->Structured animal body priors (e.g. SMAL model)
 
-3. Build the instancer code on Linux (you may want to adapt the Embree include and library dirs in [instancer/setup.py](instancer/setup.py) depending on your local setup)
+The goal is to improve realism, controllability and generalization of 3D animal reconstruction.
 
-    ```
-    make -C instancer
-    ```
+---
 
-# Creating the example dataset
-We provide an example showing how our datasets are created. You'll need to have [Blender](https://www.blender.org/) (2.92) installed and in your path. This takes a while.
+## The Core Foundation 
+
+This project builds upon:
+
+- ->NeRF-Tex
+- ->The Skinned Multi-Animal Linear Model
+
+---
+
+## Setup
+
+Please refer to the original repository of [NeRF-Tex](https://github.com/hbaatz/nerf-tex) for environment setup and foundational implementations. 
+Additional dependencies include:
 ```
-sh data/create_dataset.sh data/carpet.blend data/configs/config_carpet.py
-python data/nerf2tfr.py datasets/materials/carpet dataset/materials/carpet/tfr
-```
-
-# Downloading the datasets
-The datasets are available [here](https://drive.google.com/drive/folders/1xAvk1jewv7lGG25Iqd2-yh-CnicA30Iy?usp=sharing).
-
-# Training an example scene
-```
-python main.py configs/config_carpet_train.py
-```
-
-# Rendering an example scene
-```
-python main.py configs/config_carpet_render.py
+conda install numpy tk
+pip install opencv-python
 ```
 
-# Acknowledgements
-We thank the contributors of the following projects used in this implentation for making their work available publicly:
-- [The original NeRF implementation by Ben Mildenhall](https://github.com/bmild/nerf)
-- [Embree](https://github.com/embree/embree)
-- [libigl](https://github.com/libigl/libigl.git)
-- [eigen](https://eigen.tuxfamily.org)
-- [stb](https://github.com/nothings/stb.git)
-- [nlohmann/json](https://github.com/nlohmann/json.git)
-- [The Stanford 3D Scanning Repository](https://graphics.stanford.edu/data/3Dscanrep/)
+---
+
+## Interactive Renderer
+
+- We develop a simple application that allows the user to creatively explore the NeRF-Tex texture representation applied to animal models.
+- To start the user interface for the interactive rendering:
+```
+python interactive_renderer.py
+```
+
+<img src="gifs/ui_preview.png" width="80%">
+
+---
+
+## Notes
+
+- -> Only the essential checkpoints and code are included, repository excludes large datasets.
+Should you have a question regarding any details or want the files, feel free to contact me via [e-mail](lucinkakoprivnanska@gmail.com).
+
+---
+
+## Acknowledgements
+
+All credit goes to the original authors of the base methods,
+- -> [NeRF-Tex](https://hbaatz.github.io/nerf-tex/)
+- -> [The SMAL Model](https://smal.is.tue.mpg.de/) 
+
+
+

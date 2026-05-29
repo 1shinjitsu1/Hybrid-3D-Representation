@@ -20,20 +20,14 @@ config = {
             'width': 512,
             'angle': 0.55,                                          # Camera angle
             'radius': 6.,                                           # Camera radius
-            'pose_dist_config': {                                   # Distribution of the camera locations scaled by the radius, pointing towards the origin
-                'module': 'data.distribution.Sphere',               # In this case, uniformly spaced positions along a fixed latitude, for more options see data/distribution.py
-                'sampler_config': {
-                    'module': 'data.sampler.Concat',
-                    'sampler_config_0': {
-                        'module': 'data.sampler.Independent',
-                    },
-                    'sampler_config_1': {
-                        'module': 'data.sampler.Grid'
-                    },
-                    'n': 5
-                },
-                'u_range': [.3,.3],
-                'v_range': [0,1.]
+            'pose_dist_config': { 
+                'module': 'data.distribution.Sphere', 
+                'sampler_config': { 
+                    'module': 'data.sampler.Grid', 
+                    'n': 1 
+                }, 
+                'u_range': (.2,.2),
+                'v_range': (.8,.8)
             },
             'parameter_dist_config': {                              # Distribution of the parameters fed to the model. The position of the parameters has to match the ones from the dataset this model is trained on.
                 'module': 'data.distribution.Constant',
@@ -83,9 +77,9 @@ config = {
             'b_0': [-1.4,-1.2,-.1],                                 # Patch BBox size
             'b_1': [1.2,1.2,1.8],
             'cast_shadow_rays': False,                              # Wether or not to cast shadow rays
-            'textures': ['meshes/smooth_checkerboard.png','','','','light'],    # Textures to specify material parameters in a spatially changing manner. They are modulated by the value provided in the test dataset config above. If no texture is provided, the value from that config is used. As a special case, lighting parameters are specified by 'light' (directional light) or 'point' (point light), and the corresponding parameters from the dataset config are interpreted as light direction or light strength and point location respectively.
-            'mesh_path': 'meshes/cloth_mesh.ply',                   # Path to the mesh used for instancing
-            'patch_origins_path': 'meshes/cloth_anchor_points.ply', # Path tho the anchor point locations
+            'textures': ['textures/stripes.png','','','','light'],    # Textures to specify material parameters in a spatially changing manner. They are modulated by the value provided in the test dataset config above. If no texture is provided, the value from that config is used. As a special case, lighting parameters are specified by 'light' (directional light) or 'point' (point light), and the corresponding parameters from the dataset config are interpreted as light direction or light strength and point location respectively.
+            'mesh_path': 'meshes/wolf.ply',                   # Path to the mesh used for instancing
+            #'patch_origins_path': 'meshes/cloth_anchor_points.ply', # Path tho the anchor point locations
             'patch_scale': 0.09,                                    # Scale of the patches
             'min_shadow_samples': 8,                                # Minimal number of shadow samples per ray
             'n_shadow_samples': 256,                                # Maximal number of shadow samples per ray

@@ -55,8 +55,8 @@ config = {
         },
         'proxy_config': {
             'module': 'network.proxy.AABB',
-            'b_0': [-1.2,-1.2,-.1],
-            'b_1': [1.2,1.2,1]
+            'b_0': [-10,-10,-10], #so it doesnt crop legs
+            'b_1': [10,10,10]
         },
         'n_epochs': 1
     },
@@ -91,8 +91,8 @@ config = {
             'b_1': [1.8,1.9,1.3],
             'cast_shadow_rays': True,
             'textures': ['','point'],
-            'mesh_path': 'meshes/terrain_mesh.ply',
-            'patch_origins_path': 'meshes/terrain_anchor_points.ply',
+            'mesh_path': 'meshes/hippo.ply',
+            #'patch_origins_path': 'meshes/terrain_anchor_points.ply',
             'patch_scale': 0.1,
             'min_shadow_samples': 8,
             'n_shadow_samples': 128,

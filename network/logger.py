@@ -52,8 +52,7 @@ class Logger():
             os.makedirs(self.imgs_path, exist_ok=True)
 
             # Render images
-            self.render_images(self.imgs_path)
-
+            self.render_images(self.imgs_path) 
     def __call__(self, loss: dict) -> None:
         self.step.assign_add(1)
         step_value = self.step.numpy()

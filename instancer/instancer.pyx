@@ -3,6 +3,8 @@ cimport numpy as np
 import numpy as np
 import tensorflow as tf
 
+np.import_array() #I added
+
 cdef class Instancer:
     cdef C_Instancer* thisptr
 
