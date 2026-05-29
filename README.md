@@ -1,6 +1,6 @@
 # Hybrid Representation for 3D Animal Model
 
-This repository contains the implementation and experiments a bachelor thesis.
+This repository contains the implementation and experiments of a bachelor thesis.
 
 The work builds upon and extends **NeRF-Tex** and related 3D modeling approaches, focusing on hybrid representations for detailed 3D animal reconstruction.
 
